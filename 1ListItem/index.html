@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>to-do</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <ul>
+        <li>This is </li>
+        <li>an ugly looking, incomplete </li>
+        <li>to do app</li>
+
+    </ul>
+    <input type="text" name="new item">
+    <button id="clicker">+ADD</button>
+
+    <script>
+        const mainList = document.querySelector('ul');
+        const inputElem = document.querySelector('input');
+        const clicker = document.getElementById('clicker');
+
+        clicker.addEventListener("click", function() {
+
+            if (inputElem.value.length >= 1) {
+                let li = document.createElement('li');
+                let tempNode = document.createTextNode(inputElem.value);
+                li.appendChild(tempNode);
+                mainList.appendChild(li);
+
+            } else {
+                alert("😒😒😒😒😒😒😒 write something ...😒😒😒😒😒😒😒 ")
+            }
+
+        })
+
+    </script>
+
+</body>
+
+</html>
